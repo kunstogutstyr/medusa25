@@ -54,6 +54,8 @@
   },
   "scripts": {
     "build": "turbo run build --concurrency=50% --no-daemon",
+    "start": "cd packages/medusa && medusa start",
+    "heroku-postbuild": "cd packages/medusa && medusa migrations run",
     "lint": "eslint --ignore-path .eslintignore --ext .js,.ts,.tsx .",
     "lint:path": "eslint --ignore-path .eslintignore --ext .js,.ts,.tsx",
     "prettier": "prettier",
